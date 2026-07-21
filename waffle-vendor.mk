@@ -1513,6 +1513,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/waffle/proprietary/odm/vendor/firmware/uff_spi.b08:$(TARGET_COPY_OUT_ODM)/vendor/firmware/uff_spi.b08 \
     vendor/oneplus/waffle/proprietary/odm/vendor/firmware/uff_spi.mdt:$(TARGET_COPY_OUT_ODM)/vendor/firmware/uff_spi.mdt \
     vendor/oneplus/waffle/proprietary/product/etc/permissions/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml \
+    vendor/oneplus/waffle/proprietary/system/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_SYSTEM)/etc/dolby_vision.cfg \
     vendor/oneplus/waffle/proprietary/vendor/etc/2024-01-12_platform_RSA_license_a226ad89-a187-4b14-9447-d20bfe9dac1a.pfm:$(TARGET_COPY_OUT_VENDOR)/etc/2024-01-12_platform_RSA_license_a226ad89-a187-4b14-9447-d20bfe9dac1a.pfm \
     vendor/oneplus/waffle/proprietary/vendor/etc/clstc_config_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/clstc_config_library.xml \
     vendor/oneplus/waffle/proprietary/vendor/etc/display/DPU1010.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU1010.xml \
@@ -1704,9 +1705,11 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/waffle/proprietary/vendor/lib64/camera/imx809_3.pb:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/imx809_3.pb \
     vendor/oneplus/waffle/proprietary/vendor/lib64/camera/s5k3p9_2.pb:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/s5k3p9_2.pb \
     vendor/oneplus/waffle/proprietary/vendor/lib64/camera/s5k3p9_3.pb:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/s5k3p9_3.pb \
-    vendor/oneplus/waffle/proprietary/vendor/lib64/libpnc_cl_program.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/libpnc_cl_program.bin
+    vendor/oneplus/waffle/proprietary/vendor/lib64/libpnc_cl_program.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/libpnc_cl_program.bin \
+    vendor/oneplus/waffle/proprietary/vendor/persist/display/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/persist/display/dolby_vision.cfg
 
 PRODUCT_PACKAGES += \
+    vendor.dolby.dvs-V1-ndk \
     com.qti.eeprom.gt24p128c2csli_imx766 \
     com.qti.eeprom.gt24p128e2csli_s5kjn1 \
     com.qti.eeprom.irs2381c_polar \
@@ -1986,6 +1989,7 @@ PRODUCT_PACKAGES += \
     libtriplecam_optical_zoom_control_vendor \
     libtriplecam_video_optical_zoom_vendor \
     libubifocus \
+    libui-stock \
     libvideoml \
     libvmfilexfer \
     sensors.qsh \
@@ -2009,6 +2013,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.offlinecamera-service-impl \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
     vendor.qti.hardware.qdutils_disp@1.0 \
+    libdolbyeffect_4.1 \
+    liboplusdolbyeffect_4.1 \
     libQnnHtp.aiboost \
     libQnnHtpPrepare.aiboost \
     libQnnHtpV75Stub.aiboost \

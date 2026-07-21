@@ -12,6 +12,30 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.dolby.dvs-V1-ndk",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/vendor.dolby.dvs-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
     name: "com.qti.eeprom.gt24p128c2csli_imx766",
     owner: "oneplus",
     strip: {
@@ -10883,6 +10907,49 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libui-stock",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libui-stock.so",
+            ],
+            shared_libs: [
+                "android.hardware.graphics.common-V7-ndk",
+                "android.hardware.graphics.allocator-V2-ndk",
+                "android.hardware.graphics.allocator@2.0",
+                "android.hardware.graphics.allocator@3.0",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.common@1.2",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@2.1",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "libgralloctypes",
+                "libhidlbase",
+                "libsync",
+                "libutils",
+                "liblog",
+                "libvndksupport",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libvideoml",
     owner: "oneplus",
     strip: {
@@ -11661,6 +11728,59 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdolbyeffect_4.1",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/product/lib64/libdolbyeffect_4.1.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liboplusdolbyeffect_4.1",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/product/lib64/liboplusdolbyeffect_4.1.so",
+            ],
+            shared_libs: [
+                "libdolbyeffect_4.1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    product_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -12447,7 +12567,7 @@ cc_prebuilt_library_shared {
                 "libhardware",
                 "liblog",
                 "libutils",
-                "libui",
+                "libui-stock",
                 "android.hardware.graphics.common@1.0",
                 "android.hardware.graphics.common@1.1",
                 "android.hardware.graphics.common@1.2",
@@ -13011,7 +13131,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
-                "libui",
+                "libui-stock",
                 "libutils",
                 "libGLESv3",
                 "libEGL",
@@ -13041,7 +13161,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libsharebuffer",
-                "libui",
+                "libui-stock",
                 "libutils",
                 "libnativewindow",
                 "libc++_shared",
@@ -13290,7 +13410,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libsharebuffer",
-                "libui",
+                "libui-stock",
                 "libutils",
                 "libnativewindow",
                 "libc++_shared",
@@ -17077,7 +17197,7 @@ cc_prebuilt_library_shared {
                 "proprietary/odm/lib64/libmvgcommon.so",
             ],
             shared_libs: [
-                "libui",
+                "libui-stock",
                 "libutils",
                 "libOGLManager",
                 "libsharebuffer",
@@ -17917,7 +18037,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libdmabufheap",
                 "libnativewindow",
-                "libui",
+                "libui-stock",
                 "libutils",
                 "libcutils",
                 "liblog",
